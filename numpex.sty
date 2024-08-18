@@ -1,4 +1,4 @@
-%% hyperride.sty
+%% numpex.sty
 %%
 %% Style file for documents of the embeddia project (adapted from fracas.sty)
 %%
@@ -11,13 +11,13 @@
 %%			Thu Jan 17 07: JA: adapted to i2home
 %%          Fri May 19 SL: adapted to embeddia
 %%			2020/05/18 Adaptations for ERIGrid 2.0 (TS)
-%%			2020/10/27 Adaptations for HYPERRIDE (TS)
+%%			2020/10/27 Adaptations for numpex (TS)
 
 %%%%%%%%%%%%%%%%%%%%%
 % package description
 %%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{hyperride}[2024/08/17 numpex style sheet v1.0]
+\ProvidesPackage{numpex}[2024/08/17 numpex style sheet v1.0]
 % packages and includes
 \input{istprog.sty}
 \RequirePackage{a4wide}	% A4
@@ -46,7 +46,7 @@
 
 \AtBeginDocument{\apptocmd{\thebibliography}{\csname phantomsection\endcsname\addcontentsline{toc}{section}{\bibname}}{}{}}
 % \input{a4wide.sty}
-\typeout{Document Style `NumPEx' <27 October, 2020>.}
+\typeout{Document Style `NumPEx' <17 August, 2024>.}
 
 \def\deliv@checkmark{ x }
 \DeclareOption{checkmark}{\def\deliv@checkmark{$\underline{\checkmark}$}}
@@ -69,7 +69,7 @@
 % \textbf{AIT Austrian Institute of Technology} \\
 % }
 
-% \webAddress{https://hyperride.eu}
+% \webAddress{https://numpex.eu}
 % \principalContact{ERIGrid 2.0 Project Co-ordinator \\
 % Dr.\ Gerhard Jambrich \\
 % AIT Austrian Institute of Technology \\
@@ -93,13 +93,13 @@
 \usepackage{array}	% tabs
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
-\definecolor{hyperrideblack}{RGB}{0,0,0}
-\definecolor{hyperrideblue}{RGB}{42,46,128}
-\definecolor{hyperridefont}{RGB}{54,54,54}
-\definecolor{hyperridered}{RGB}{250,40,35}
-\definecolor{hyperridegray}{RGB}{127,127,127}
-\definecolor{hyperridelightgray}{RGB}{219,219,219}
-\definecolor{hyperridelightergray}{RGB}{237,237,237}
+\definecolor{numpexblack}{RGB}{0,0,0}
+\definecolor{numpexblue}{RGB}{42,46,128}
+\definecolor{numpexfont}{RGB}{54,54,54}
+\definecolor{numpexred}{RGB}{250,40,35}
+\definecolor{numpexgray}{RGB}{127,127,127}
+\definecolor{numpexlightgray}{RGB}{219,219,219}
+\definecolor{numpexlightergray}{RGB}{237,237,237}
 
 \geometry{a4paper,top=2.50cm,left=2.50cm,right=2.50cm,bottom=3.30cm,headsep=0.50cm,footskip=0.75cm}
 \setlength{\parindent}{0pt}
@@ -114,7 +114,7 @@
 \renewcommand{\cftsubsecfont}{\small}
 \renewcommand{\cftsecfont}{\normalsize}
 \renewcommand{\contentsname}{Table of Contents}
-\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{hyperrideblue}}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{numpexblue}}
 \setlength{\cftbeforetoctitleskip}{-0.4cm}
 \setlength{\cftaftertoctitleskip}{3mm}
 \setlength{\cftbeforesecskip}{2mm}
@@ -143,7 +143,7 @@
 \setlength{\cftfigindent}{0mm}	
 \setlength{\cftbeforeloftitleskip}{-0.4cm}
 \setlength{\cftafterloftitleskip}{3mm}
-\renewcommand{\cftloftitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{hyperrideblue}}
+\renewcommand{\cftloftitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{numpexblue}}
 \renewcommand{\cftfigleader}{\small\cftdotfill{\cftfigdotsep}}
 \renewcommand{\cftfigdotsep}{\cftdotsep}
 \renewcommand{\cftdotsep}{0.5}
@@ -160,7 +160,7 @@
 \setlength{\cfttabindent}{0mm}
 \setlength{\cftbeforelottitleskip}{-0.4cm}
 \setlength{\cftafterlottitleskip}{3mm}
-\renewcommand{\cftlottitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{hyperrideblue}}
+\renewcommand{\cftlottitlefont}{\normalfont\fontsize{18}{23}\sffamily\bfseries\color{numpexblue}}
 \renewcommand{\cfttableader}{\small\cftdotfill{\cfttabdotsep}}
 \renewcommand{\cfttabdotsep}{\cftdotsep}
 \renewcommand{\cftdotsep}{0.5}

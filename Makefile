@@ -1,5 +1,5 @@
 BASE=template
-DIRECTORY=HYPERRIDEDeliverable
+DIRECTORY=numpexDeliverable
 bib:
 	bibtool  -v -d -s -- 'preserve.key.case=on' -x $(BASE).aux > $(BASE)-new.bib
 	mv $(BASE).bib	$(BASE)-old.bib	

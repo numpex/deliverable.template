@@ -7,7 +7,8 @@
 %%			2014/01/10 Adaptations for Metalogue
 %%			2019/05/31 Adaptations for Embeddia
 %%			2020/05/18 Adaptations for ERIGrid 2.0 (TS)
-%%			2020/05/18 Adaptations for HYPERRIDE (TS)
+%%			2020/05/18 Adaptations for numpex (TS)
+%%			2025/08/18 Adaptations for NUMPEX (TS)
 
 %\usepackage{xstring}
 \usepackage{lastpage}
@@ -26,18 +27,18 @@
 	\renewcommand{\section}{\@startsection {section}{1}{\z@}%
           {-3.5ex \@plus -1ex \@minus -.2ex}%
           {2.3ex \@plus.2ex}%
-          {\normalfont\fontsize{18}{23}\sffamily\bfseries\color{hyperrideblue}}%
+          {\normalfont\fontsize{18}{23}\sffamily\bfseries\color{numpexblue}}%
 	}
 
 \renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
 	          {-3.5ex \@plus -1ex \@minus -.2ex}%
                   {2.3ex \@plus.2ex}
-		{\normalfont\fontsize{14}{18}\sffamily\bfseries\color{hyperrideblue}}}
+		{\normalfont\fontsize{14}{18}\sffamily\bfseries\color{numpexblue}}}
 
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
 	          {-3.5ex \@plus -1ex \@minus -.2ex}%
                   {2.3ex \@plus.2ex}
-		{\normalfont\fontsize{12}{16}\sffamily\bfseries\color{hyperrideblue}}}
+		{\normalfont\fontsize{12}{16}\sffamily\bfseries\color{numpexblue}}}
 
 % \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
              % {3.25ex \@plus1ex \ at minus.2ex}%
@@ -52,51 +53,51 @@
 \alphabetic[e]{\thestring}
 \edef\deliv@captitle{\thestring}
 \testmatchingchar{\deliv@status}{1}{d}
-EXA-MA-\convertchar{\deliv@number}{.}{}-\noblanks{\deliv@captitle}-\deliv@status\ifmatchingchar{-\deliv@version}\else{}\fi
+\proj@acronym-\convertchar{\deliv@number}{.}{}-\noblanks{\deliv@captitle}-\deliv@status\ifmatchingchar{-\deliv@version}\else{}\fi
 %\IfBeginWith{\deliv@status}{d}{-\deliv@version}{}
 }
 
 % istdis project refs
 \newcommand{\istdis}{
-  {\fontsize{12}{15}\bf\color{hyperrideblue}Deliverable Information}\\[1.5ex] 
+  {\fontsize{12}{15}\bf\color{numpexblue}Deliverable Information}\\[1.5ex] 
   \setlength{\parindent}{0pt}
   \def\arraystretch{1.25}
-  \arrayrulecolor{hyperridegray}
+  \arrayrulecolor{numpexgray}
   {\fontsize{9}{11}\selectfont
-  \begin{tabular}[t]{!{\color{hyperridegray}\vrule}p{.25\linewidth}!{\color{hyperridegray}\vrule}p{.6885\linewidth}!{\color{hyperridegray}\vrule}}
-    \rowcolor{hyperridegray}\multicolumn{2}{c}
+  \begin{tabular}[t]{!{\color{numpexgray}\vrule}p{.25\linewidth}!{\color{numpexgray}\vrule}p{.6885\linewidth}!{\color{numpexgray}\vrule}}
+    \rowcolor{numpexgray}\multicolumn{2}{c}
     {\rule{0pt}{2.5ex}\color{white}\bf Document Administrative Information} \\
     \rowcolor{white}
     Project Acronym: & Exa-MA \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Project Number: & 957788 \\
     \rowcolor{white}
     Deliverable Number: & \deliv@number\\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Deliverable Full Title: & \parbox{\linewidth}{\deliv@name} \\
     \rowcolor{white}
     Deliverable Short Title: & \deliv@stitle \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Document Identifier: & \GetDeliverableID{} \\
     \rowcolor{white}
     Beneficiary in Charge: & \deliv@owner \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Report Version: & \deliv@version \\
     \rowcolor{white}
     Contractual Date: & \deliv@contrdate \\
-	\rowcolor{hyperridelightergray}
+	\rowcolor{numpexlightergray}
     Report Submission Date: & \deliv@actdate \\
     \rowcolor{white}
     Dissemination Level: & \deliv@disslevel \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Nature: & \deliv@type \\
     \rowcolor{white}
     Lead Author(s): & \deliv@authors \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Co-author(s):& \deliv@FPauthors \\
     \rowcolor{white}
 	Keywords: & \deliv@keywords \\
-    \rowcolor{hyperridelightergray}
+    \rowcolor{numpexlightergray}
     Status: & \deliv@status@table \\
     \hline
   \end{tabular}
@@ -113,19 +114,19 @@ EXA-MA-\convertchar{\deliv@number}{.}{}-\noblanks{\deliv@captitle}-\deliv@status
 	\setcounter{@row}{0} \newwrite\chlogfile
 	\immediate\openout\chlogfile=\jobname.chl
 	\immediate\write\chlogfile{%
-		{\noexpand\fontsize{12}{15}\noexpand\bf\noexpand\color{hyperrideblue}Change Log}\noexpand\\[1.5ex] 
+		{\noexpand\fontsize{12}{15}\noexpand\bf\noexpand\color{numpexblue}Change Log}\noexpand\\[1.5ex] 
 		\noexpand\setlength{\noexpand\parindent}{0pt}
 		\noexpand\def\noexpand\arraystretch{1.00}
-		\noexpand\def\noexpand\clinecolor{hyperridegray}
+		\noexpand\def\noexpand\clinecolor{numpexgray}
 		\noexpand\begin{tabular}[t]{!{\noexpand\color{\noexpand\clinecolor}\noexpand\vrule}p{.12\noexpand\linewidth}!{\noexpand\color{\noexpand\clinecolor}\noexpand\vrule}p{.10\noexpand\linewidth}!{\noexpand\color{\noexpand\clinecolor}\noexpand\vrule}p{.3\noexpand\linewidth}!{\noexpand\color{\noexpand\clinecolor}\noexpand\vrule}p{.364\noexpand\linewidth}!{\noexpand\color{\noexpand\clinecolor}\noexpand\vrule}}
-			\noexpand\rowcolor{hyperridegray}
+			\noexpand\rowcolor{numpexgray}
 			\noexpand\footnotesize\noexpand\rule{0pt}{2.5ex}\noexpand\color{white}\noexpand\bf Date &
 			\noexpand\footnotesize\noexpand\rule{0pt}{2.5ex}\noexpand\color{white}\noexpand\bf Version & 
 			\noexpand\footnotesize\noexpand\rule{0pt}{2.5ex}\noexpand\color{white}\noexpand\bf Author/Editor & 
-			\noexpand\footnotesize\noexpand\rule{0pt}{2.5ex}\noexpand\color{white}\noexpand\bf Summary of Changes Made \noexpand\arrayrulecolor{hyperridegray}\noexpand\def\noexpand\clinecolor{hyperridegray}\noexpand\\ \noexpand\hline}
+			\noexpand\footnotesize\noexpand\rule{0pt}{2.5ex}\noexpand\color{white}\noexpand\bf Summary of Changes Made \noexpand\arrayrulecolor{numpexgray}\noexpand\def\noexpand\clinecolor{numpexgray}\noexpand\\ \noexpand\hline}
 		\whiledo{\value{@row}<\value{@changecount}}{%
 			\stepcounter{@row}
-			\ifodd\value{@row}\def\shadeofgray{white}\else\def\shadeofgray{hyperridelightergray}\fi
+			\ifodd\value{@row}\def\shadeofgray{white}\else\def\shadeofgray{numpexlightergray}\fi
 			\immediate\write\chlogfile{%
 				\noexpand\rowcolor{\shadeofgray}\noexpand\footnotesize\csname @changedate\arabic{@row}\endcsname &
 				\noexpand\footnotesize\csname @changeversion\arabic{@row}\endcsname &
@@ -149,22 +150,22 @@ EXA-MA-\convertchar{\deliv@number}{.}{}-\noblanks{\deliv@captitle}-\deliv@status
 	
 	\vspace*{5cm}
 
-    {\fontsize{12}{15}\bf\color{hyperrideblue}Consortium}\\[2ex] 
+    {\fontsize{12}{15}\bf\color{numpexblue}Consortium}\\[2ex] 
 	{\includegraphics[width=0.98\linewidth,page=2]{graphics/numpex-cover-bkg.pdf}}\\[1ex]
 
-	{\fontsize{12}{15}\bf\color{hyperrideblue}Disclaimer}\\[2ex] 
-	{\small All information provided reflects the status of the \hyperride{} project at the time of writing and may be subject to change.
+	{\fontsize{12}{15}\bf\color{numpexblue}Disclaimer}\\[2ex] 
+	{\small All information provided reflects the status of the \numpex{} project at the time of writing and may be subject to change.
 	
-	Neither the \hyperride{} Consortium as a whole nor any single party within the \hyperride{} Consortium warrant that the information contained in this document is capable of use, nor that the use of such information is free from risk. Neither the \hyperride{} Consortium as a whole nor any single party within the \hyperride{} Consortium accepts any liability for loss or damage suffered by any person using the information.
+	Neither the \numpex{} Consortium as a whole nor any single party within the \numpex{} Consortium warrant that the information contained in this document is capable of use, nor that the use of such information is free from risk. Neither the \numpex{} Consortium as a whole nor any single party within the \numpex{} Consortium accepts any liability for loss or damage suffered by any person using the information.
 	
 	This document does not represent the opinion of the European Community, and the European Community is not responsible for any use that might be made of its content.}\\[1ex]
 
-	\renewcommand{\doclicenseLongText}{\textcopyright~\the\year~by the authors, the \hyperride{} Consortium. \doclicenseText}
+	\renewcommand{\doclicenseLongText}{\textcopyright~\the\year~by the authors, the \numpex{} Consortium. \doclicenseText}
 
-	{\fontsize{12}{15}\bf\color{hyperrideblue}Copyright Notice}\\[2.0ex] 
+	{\fontsize{12}{15}\bf\color{numpexblue}Copyright Notice}\\[2.0ex] 
 	\ifthenelse{\equal{\deliv@disslevel}{PU}}
 	{\vspace*{-3.0ex}\small\doclicenseLicense}
-	{\small\textcopyright~\the\year~by the authors, the \hyperride{} Consortium.}
+	{\small\textcopyright~\the\year~by the authors, the \numpex{} Consortium.}
 }
   
 \def\ProjectRefNo#1{\gdef\proj@ref@no{#1}}

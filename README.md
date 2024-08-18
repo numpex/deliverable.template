@@ -1,4 +1,4 @@
-LaTeX style files for HYPERRIDE deliverables.
+LaTeX style files for numpex deliverables.
 ===============================================
 
 Basic usage:
@@ -8,7 +8,7 @@ The basic structure of a deliverable formatted according with these
 styles should be (minimally):
 
     \documentclass[11pt]{report}
-    \usepackage{hyperride}  
+    \usepackage{numpex}  
     
     \begin{document}
     
@@ -24,7 +24,7 @@ styles should be (minimally):
     \istChange{}{}{}{}
 
     %% Deliverable information
-    \ProjectAcronym{HYPERRIDE}
+    \ProjectAcronym{numpex}
     \ProjectFullTitle{Hybrid Provision of Energy based on Reliability and Resiliency by Integration of Dc Equipment}
     \ProjectRefNo{957788}
     \delivNumber{Dx.y}
