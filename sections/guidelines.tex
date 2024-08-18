@@ -1,3 +1,5 @@
+%!TEX root = ../deliverable.template.tex
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Guidelines
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,18 +15,22 @@
 \subsection{Report Titles}
 \label{sec:report-titles}
 
-Deliverables have a title that is defined in the \ac{DoA}. This title is referred to as the full title of the deliverable. Please stick to the official spelling. It has turned out useful to also have a short title (max 60 characters) for each deliverable, as it can be cumbersome if one always has to use the full title. 
+Deliverables have a title that is defined in the \ac{DoA}. 
+This title is referred to as the full title of the deliverable. 
+Please stick to the official spelling. 
+It has turned out useful to also have a short title (max 60 characters) for each deliverable, as it can be cumbersome if one always has to use the full title. 
 
 \subsection{File Naming}
 \label{sec:file-naming}
 
-The project will generate many documents (deliverable reports) and versions of these reports. It is beneficial to consistently use an agreed file naming format. 
+The project will generate many documents (deliverable reports) and versions of these reports. 
+It is beneficial to consistently use an agreed file naming format. 
 
-\textit{ERIGrid2-Dnn-ShortTitle-Status-vn.n.Extension}
+\texttt{\projacronym-Dnn-ShortTitle-Status-vx.y.z.Extension}
 
 \begin{itemize}
 	\item Notice the hyphen between the various elements of the file name.
-    \item {\bf \hyperride{}}: Each \hyperride{} report should be preceded by the project acronym. Notice, there is only one correct spelling of the acronym: ‘\hyperride{}’. 
+    \item {\bf \projacronym}: Each \projacronym{} report should be preceded by the project acronym. Notice, there is only one correct spelling of the acronym: ‘\projacronym’. 
     \item {\bf Dn.n}: Indicates the deliverable identifier, e.g., ‘D34’ for ‘D3.4’ following the numbering of the \ac{DoA} (Part A of Annex 1 of the Grant Agreement). Notice, there is no dot between the two parts of the deliverable number.
     \item {\bf ShortTitle}: This should be based on the formal short title of deliverables but ‘contracted’ into a single (no spaces) character string using Java class naming convention, e.g., ‘ExploitationPlan’,  or ‘ProjectWebSite’. Avoid underscore, space and other unusual characters.
 	\item {\bf Status}: 
@@ -33,8 +39,8 @@ The project will generate many documents (deliverable reports) and versions of t
 		\item \textit{final} = Final Version as checked and updated by the reviewers/WP leader/quality manager; 
 		\item \textit{submitted} = submitted version as submitted to the EC by the project coordinator/administrator.
 	\end{itemize}
-	\item {\bf vn.n}: The version of the report starting from v1.0. 
-    \item {\bf Extension}: File extension, e.g., ‘docx’ for Microsoft Word and ‘pdf’ for Portable Document Format. 
+	\item {\bf vx.y.z}: The version of the report starting from v1.0. 
+    \item {\bf Extension}: File extension, e.g., ‘pdf’ for Portable Document Format. 
 \end{itemize}
 
 Examples:
@@ -267,25 +273,25 @@ The work described in this deliverable has resulted in the following resources:
     \def\arraystretch{1.25}		
     \begin{tabular}{|c|c|c|}
         \hline
-        \rowcolor{hyperridegray}
+        \rowcolor{numpexgray}
         \color{white} Description & 
         \color{white} URL & 
         \color{white} Availability 
         \\\hline
     
-        \rowcolor{white}\color{hyperridefont} 
+        \rowcolor{white}\color{numpexfont} 
         My Dataset 1 &  
         \url{http://hdl.handle.net/12345} &
         Public (Apache 2.0) \\
     
-        \rowcolor{hyperridelightergray}\color{hyperridefont} 
+        \rowcolor{numpexlightergray}\color{numpexfont} 
         My Dataset 2 &  
         \url{http://hdl.handle.net/54321} &
         Private (consortium only) \\
     
-        \rowcolor{white}\color{hyperridefont} 
+        \rowcolor{white}\color{numpexfont} 
         My Code &  
-        \url{github.com/hyperride/xxx} &
+        \url{github.com/numpex/xxx} &
         Public (GPL3) \\
     
         \hline
