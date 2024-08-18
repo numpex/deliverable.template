@@ -22,7 +22,7 @@ jobs:
         id: texlive_runner
         run: |
           if ! [ -z "$GH_TOKEN" ]; then
-            runners=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/feelpp/actions/runners)
+            runners=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/${{ github.repository_owner }}/actions/runners)
             texlive=$(echo $runners | jq --arg label "self-texlive" '[.runners[] | any(.labels[]; .name == $label) and .status == "online"] | any')
             if [ "$texlive" = "false" ]; then
                echo "runner=ubuntu-latest" >> "$GITHUB_OUTPUT"
