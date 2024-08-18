@@ -97,10 +97,16 @@ jobs:
             ./*.bbl
             ./${{ needs.workflow-setup.outputs.pdf }}
             ./README.adoc
+            ./hooks*
             ./img*
             ./dat*
             ./*.png
             ./a.cli
+            ./*.sty
+            ./exclude.txt
+            ./sections*
+            ./litterature*
+            ./graphics*
             !./.git*
             !./.github*
             !./.vscode*
