@@ -10,7 +10,7 @@ on:
 jobs:
   workflow-setup:
     name: Workflow Setup
-    runs-on: ubuntu-24.04
+    runs-on: self-ubuntu-24.04
     outputs:
       runner: ${{ steps.texlive_runner.outputs.runner }}
       prefix: ${{ steps.doc_prefix.outputs.prefix }}
