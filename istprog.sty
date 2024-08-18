@@ -9,7 +9,7 @@
 %%			2020/05/18 Adaptations for ERIGrid 2.0 (TS)
 %%			2020/05/18 Adaptations for numpex (TS)
 %%			2025/08/18 Adaptations for NUMPEX (TS)
-
+\ProvidesPackage{istprog}
 %\usepackage{xstring}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -68,9 +68,9 @@
     \rowcolor{numpexgray}\multicolumn{2}{c}
     {\rule{0pt}{2.5ex}\color{white}\bf Document Administrative Information} \\
     \rowcolor{white}
-    Project Acronym: & Exa-MA \\
+    Project Acronym: & \proj@acronym \\
     \rowcolor{numpexlightergray}
-    Project Number: & 957788 \\
+    Project Number: & \proj@ref@no \\
     \rowcolor{white}
     Deliverable Number: & \deliv@number\\
     \rowcolor{numpexlightergray}
@@ -106,7 +106,7 @@
 
 \newcommand{\istmakechangelog} {%
   \InputIfFileExists {\jobname.chl}{}{%
-  \ClassWarning{h2020proposal}{Change log not complete yet. Recompile to include all data.}}%
+  \ClassWarning{france2030proposal}{Change log not complete yet. Recompile to include all data.}}%
 }%
 
 \newcommand{\writechlog}{
@@ -154,24 +154,27 @@
 	{\includegraphics[width=0.98\linewidth,page=2]{graphics/numpex-cover-bkg.pdf}}\\[1ex]
 
 	{\fontsize{12}{15}\bf\color{numpexblue}Disclaimer}\\[2ex] 
-	{\small All information provided reflects the status of the \numpex{} project at the time of writing and may be subject to change.
+	{\small All information provided reflects the status of the \projacronym{} project at the time of writing and may be subject to change.
 	
-	Neither the \numpex{} Consortium as a whole nor any single party within the \numpex{} Consortium warrant that the information contained in this document is capable of use, nor that the use of such information is free from risk. Neither the \numpex{} Consortium as a whole nor any single party within the \numpex{} Consortium accepts any liability for loss or damage suffered by any person using the information.
+	Neither the \projacronym{} Consortium as a whole nor any single party within the \projacronym{} Consortium warrant that the information contained in this document is capable of use, nor that the use of such information is free from risk. 
+  Neither the \projacronym{} Consortium as a whole nor any single party within the \projacronym{} Consortium accepts any liability for loss or damage suffered by any person using the information.
 	
-	This document does not represent the opinion of the European Community, and the European Community is not responsible for any use that might be made of its content.}\\[1ex]
+	This document does not represent the opinion of the French National Research Agency, and the French National Research Agency is not responsible for any use that might be made of its content.
+  }\\[1ex]
 
-	\renewcommand{\doclicenseLongText}{\textcopyright~\the\year~by the authors, the \numpex{} Consortium. \doclicenseText}
+	\renewcommand{\doclicenseLongText}{\textcopyright~\the\year~by the authors, the \projacronym{} Consortium. \doclicenseText}
 
 	{\fontsize{12}{15}\bf\color{numpexblue}Copyright Notice}\\[2.0ex] 
 	\ifthenelse{\equal{\deliv@disslevel}{PU}}
 	{\vspace*{-3.0ex}\small\doclicenseLicense}
 	{\small\textcopyright~\the\year~by the authors, the \numpex{} Consortium.}
 }
-  
-\def\ProjectRefNo#1{\gdef\proj@ref@no{#1}}
+\makeatletter
+\def\ProjectRefNo#1{\gdef\proj@ref@no{#1}\gdef\projrefno{#1}}
 \def\ProjectFP#1{\gdef\proj@fp{#1}}
-\def\ProjectAcronym#1{\gdef\proj@acronym{#1}}
-\def\ProjectFullTitle#1{\gdef\proj@title{#1}}
+\def\ProjectAcronym#1{\gdef\proj@acronym{#1}\gdef\projacronym{#1}}
+
+\def\ProjectFullTitle#1{\gdef\proj@title{#1}\gdef\projtitle{#1}}
 \def\ProjectInstrument#1{\gdef\proj@instrument{#1}}
 \def\ProjectStartDuration#1{\gdef\proj@start@duration{#1}}
 \def\Security#1{\gdef\deliv@security{#1}}
@@ -207,7 +210,7 @@
   %  {\gdef\deliv@status{\lowercase{#1}}%
   %   \gdef\deliv@status@table{$\underline{\checkmark}$ draft, \_ final, \_ submitted (tick one)}}%
 }
-\def\delivVersion#1{\gdef\deliv@version{#1}}
+\def\delivVersion#1{\gdef\deliv@version{#1}\gdef\delivversion{#1}}
 \def\NumberOfPages#1{\gdef\deliv@pages{#1}}
 \def\delivMonth#1{\gdef\deliv@month{#1}}
 \def\delivYear#1{\gdef\deliv@year{#1}}
@@ -225,6 +228,7 @@
 \def\delivAbstract#1{\gdef\deliv@abstract{#1}}
 \def\delivExecSummary#1{\gdef\deliv@abstract{#1}}
 \def\delivExecSummary#1{\gdef\deliv@abstract{#1}}
+
 
 \newcounter{@changecount}
 \setcounter{@changecount}{0}
@@ -332,5 +336,5 @@
 \def\webAddress#1{\gdef\proj@web{#1}}
 \def\principalContact#1{\gdef\proj@contact{#1}}
 \def\logo#1{\gdef\proj@logo{#1}}
-
+\makeatother
 \endinput

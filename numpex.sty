@@ -11,7 +11,8 @@
 %%			Thu Jan 17 07: JA: adapted to i2home
 %%          Fri May 19 SL: adapted to embeddia
 %%			2020/05/18 Adaptations for ERIGrid 2.0 (TS)
-%%			2020/10/27 Adaptations for numpex (TS)
+%%			2020/10/27 Adaptations for hyperride (TS)
+%%          2024/08/17 Adaptations for numpex (TS)
 
 %%%%%%%%%%%%%%%%%%%%%
 % package description
@@ -19,7 +20,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{numpex}[2024/08/17 numpex style sheet v1.0]
 % packages and includes
-\input{istprog.sty}
+\usepackage{istprog}
 \RequirePackage{a4wide}	% A4
 \usepackage{etoolbox}
 \usepackage{tocloft} 	% formatting of the table of contents.
@@ -57,7 +58,7 @@
 % Project references
 %%%%%%%%%%%%%%%%%%%%
 
-\ProjectRefNo{PEPR \textendash \space 957788}
+\ProjectRefNo{ANR-22-EXNU-0002}
 \ProjectFP{France 2030}
 \ProjectAcronym{Exa-MA}
 \ProjectFullTitle{Methods and Algorithms at Exascale}
@@ -107,7 +108,7 @@
 
 %% title page
 %% 
-\input{istcover.sty}
+\usepackage{istcover}
 
 % toc design
 \def\settableofcontents{%
