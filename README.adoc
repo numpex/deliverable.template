@@ -5,7 +5,6 @@
 .Zenodo DOI
 --
 image::https://zenodo.org/badge/DOI/10.5281/zenodo.13341126.svg[DOI, link=https://doi.org/10.5281/zenodo.13341126]
-```​⬤
 --
 
 .GitHub Information
