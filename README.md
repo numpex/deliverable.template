@@ -1,8 +1,7 @@
-LaTeX style files for numpex deliverables.
-===============================================
+# LaTeX style files for numpex deliverables.
 
-Basic usage:
-------------
+
+## Basic usage:
 
 The basic structure of a deliverable formatted according with these
 styles should be (minimally):
@@ -74,10 +73,9 @@ styles should be (minimally):
     \bibliographystyle{apacite} %% recommended 
     \{document}
 
-Further details
----------------
+## Further details
 
-See template.tex/template.pdf in this directory.
+See deliverable.template.tex/deliverable.template.pdf in this directory.
 
 If you have any thoughts on how to improve this style, feel free to
 implement them and share your results. The same goes for bug fixes.
