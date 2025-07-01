@@ -30,11 +30,11 @@
 	linkcolor=black,
 	filecolor=black,      
 	citecolor=black,
-	urlcolor=blue,
-	pdftitle=\deliv@stitle,
-	pdfauthor=\deliv@authors,
-	pdfsubject=NumPEX Exa-MA Project Deliverable,
-	pdfkeywords=\deliv@keywords,
+	urlcolor=numpexblue,
+	pdftitle=delivrable,
+	pdfauthor=authors,
+	pdfsubject=exa-soft,
+	pdfkeywords=keywords,
 	pdfcreator=pdflatex,
 	pdfproducer=Overleaf,
 }
@@ -53,33 +53,6 @@
 \DeclareOption{checkmark}{\def\deliv@checkmark{$\underline{\checkmark}$}}
 %\ExecuteOptions{checkmark}
 \ProcessOptions
-
-%%%%%%%%%%%%%%%%%%%%
-% Project references
-%%%%%%%%%%%%%%%%%%%%
-
-\ProjectRefNo{ANR-22-EXNU-0002}
-\ProjectFP{France 2030}
-\ProjectAcronym{Exa-MA}
-\ProjectFullTitle{Methods and Algorithms at Exascale}
-\ProjectInstrument{PEPR}
-\ProjectStartDuration{1 Septembre 2023 / 60 Months}
-\Security{Public}
-
-% \partners{ 
-% \textbf{AIT Austrian Institute of Technology} \\
-% }
-
-% \webAddress{https://numpex.eu}
-% \principalContact{ERIGrid 2.0 Project Co-ordinator \\
-% Dr.\ Gerhard Jambrich \\
-% AIT Austrian Institute of Technology \\
-% Electric Energy Systems -- Center for Energy \\
-% Giefinggasse 2 \\
-% 1210 Vienna, Austria \\
-% gerhard.jambrich@ait.ac.at \\
-% Phone +43 664 88335404 -- Fax +43 50550 6390
-% }
 
 \usepackage{graphicx}
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
@@ -170,8 +143,6 @@
 \addtolength{\cfttabnumwidth}{5mm}
 \renewcommand{\cfttabaftersnum}{:~}
 }
-
-\logo{\includegraphics[scale=0.465]{graphics/logo-numpex-exama-vector.png}}
 
 \newcommand{\ignore}[1]{}
 
