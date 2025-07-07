@@ -1,170 +1,135 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% numpex Deliverable Template
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------
+%		NumPEx Delivrable Template (in LateX)		
+% --------------------------------------------------
 
 \documentclass[11pt]{report}
 
-\usepackage{numpex}		% numpex specific definitions and styles  
-\usepackage[utf8]{inputenc}	% UTF8 package
+% --------------------------------------------------
+% Packages
+\usepackage{numpex}		    % NumPEx
+\usepackage[utf8]{inputenc}	
 \usepackage[T1]{fontenc}
-\usepackage{textcomp}		% common special chars
-\usepackage{amsmath}		% math formula
+\usepackage{textcomp}		
+\usepackage{amsmath}		
 \usepackage{fancybox}
-\usepackage{anyfontsize}	% fonts
+\usepackage{anyfontsize}	
 \usepackage{lipsum}
 \usepackage{cleveref}
 \usepackage[printonlyused]{acronym}
-\hypersetup{
-	pdftitle={[Title as appears in the DoA]},
-	pdfauthor={[Names of co-authors (partners short names)]},
-	pdfkeywords={[List of free keywords relevant to the deliverable]},
-}
+\usepackage{tikz}
+\usepackage{svg}
+\usepackage{multirow}
 
+% --------------------------------------------------
+% Path to figures
 \graphicspath{ {graphics/} }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Definitions
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% --------------------------------------------------
+% Definitions
 \input{defs}
 
-% CHANGE %'s below to make subsection headings visible/invisible in TOC
-%\newcommand{\xsubsubsection}[1]{\subsection{#1}}
-%\newcommand{\xsubsubsection}[1]{\subsubsection{#1}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% URL style same as regular text
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+% --------------------------------------------------
+% URL style
 \urlstyle{same}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Deliverable Information
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Project Meta Information
-\ProjectFullTitle{Methods and Algorithms at Exascale}
-\ProjectAcronym{Exa-MA}
-\ProjectRefNo{ANR-22-EXNU-0002}
-
-% Work Package Number and Title (according to DoA)
-\delivWP{WPx} 
-\delivWPName{[Title as appears in the DoA]} 
-
-% Deliverable Number and Title (according to DoA)
-\delivNumber{Dx.y}
-\delivName{[Title as appears in the DoA]}
-
-% DOI Number (will be provided by the coordinator)
-\doiNumber{10.5281/zenodo.5115579} % leave empty if no DOI Number is provided
-
-% Deliverable Short Title
-\delivShortTile{[Short title for deliverable document]}
-
-% Deliverable Responsible Partner
-\delivResponsible{UNISTRA} 
-
-% Deliverable Version, Contractual and Actual Date, Dissemination Level, Type
-\delivVersion{vn.n}
-\ContractualDate{dd/mm/yyyy}
-\ActualDate{dd/mm/yyyy}
-\delivDissLevel{PU} % PU, PP, RE, CO
-\delivType{[Report, Prototype, Other]}
-
-% List of Main Authors (usually from the responsible partner)
-\delivAuthor{[Names of co-authors (partners short names)]}
-
-% List of Co-Authors (all other co-authors should be listed here)
-\delivFPAuthor{[Names of co-authors (partners short names)]}
-
-% Provision of Keywords (about 5-10)
-\delivKeywords{[List of free keywords relevant to the deliverable]}
-
-% Deliverable Status
-\delivStatus{d} %% d = draft, f = final, s = submitted
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Change Log
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% --------------------------------------------------
+% Required for change log
 \istChange{dd/mm/yyyy}{v1.0}{Name (Partner short name)}{Draft report template}
 \istChange{}{}{}{}
 
+% --------------------------------------------------
+% Subsections in TOCs
+%\newcommand{\xsubsubsection}[1]{\subsection{#1}}
+%\newcommand{\xsubsubsection}[1]{\subsubsection{#1}}
 
+% --------------------------------------------------
+% Label end delivrable
+\AtEndDocument{\label{PageEnd}}
+
+% --------------------------------------------------
+% General information: TO DO
+% > Project
+\newcommand\ProjectAcronym{Exa-Soft} % Exa-MA % Exa-DoST
+\newcommand\ProjectTitle{Exascale Software and Tools} % Methods and algorithms for Exascale % Data-oriented Software and Tools for the Exascale
+\newcommand\ProjectId{ANR-22-EXNU-0003} % ANR-22-EXNU-0002 % ANR-22-EXNU-0004
+\newcommand\ProjectKeywords{\textcolor{numpexred}{Exascale, Software stack}}
+\newcommand\ProjectManager{Lucas Pernollet}
+\newcommand\ProjectWebSite{https://numpex.org/exasoft-hpc-software-and-tools/} % https://numpex.org/exama-methods-and-algorithms-for-exascale/ % https://numpex.org/exadost-data-oriented-software-and-tools-for-the-exascale/
+\newcommand\ProjectConsortium{Inria, CEA, CNRS, Télécom SudParis, \\ Université Paris Saclay} % Inria, CEA, CNRS, Sorbonne Université, \\ Ecole Polytechnique % Inria, CEA, CNRS, Observatoire de Paris, \\ Observatoire de la Côte d'Azur
+
+% > Delivrable
+\newcommand\DelivrableId{\textcolor{numpexred}{DX}}
+\newcommand\DelivrableTitle{\textcolor{numpexred}{XXX}}
+\newcommand\DelivrableVersion{\textcolor{numpexred}{V1.0}}
+\newcommand\DelivrableDate{\textcolor{numpexred}{DD MM YYYY}}
+\newcommand\DelivrableContractualDate{\textcolor{numpexred}{DD MM YYYY}}
+
+% > Control
+\newcommand\DelivrableAuthors{\textcolor{numpexred}{XXX}}
+\newcommand\DelivrableContributors{\textcolor{numpexred}{XXX}}
+\newcommand\DelivrableReview{\textcolor{numpexred}{XXX}}
+\newcommand\DelivrableApproval{\textcolor{numpexred}{XXX}}
+
+
+	
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Cover Page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% --------------------------------------------------
+% Cover page
 \makecover
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Table of Contents
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% --------------------------------------------------
+% Table of contents
 \clearpage
 \fancypagestyle{plain}{}
 \settableofcontents
 \tableofcontents
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% List of Figures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\clearpage
-\setlistoffigures
-\listoffigures
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% List of Tables
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\clearpage
-\setlistoftables
-\listoftables
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% List of Abbreviations
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\input{sections/abbreviations}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Deliverable Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\input{sections/summary}
+% --------------------------------------------------
+% Content
 \input{sections/introduction}
 \input{sections/guidelines}
 \input{sections/conclusions}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% References
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------
+% References
 
-\clearpage
+\cleardoublepage
+\addcontentsline{toc}{section}{References}
 \bibliography{literature/references}
 \bibliographystyle{apacite}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Appendix
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------
+% List of Abbreviations
+
+\input{sections/abbreviations}
+
+% --------------------------------------------------
+% List of tables
+
+\cleardoublepage
+\addcontentsline{toc}{section}{\listtablename}
+\setlistoftables
+\listoftables
+
+% --------------------------------------------------
+% List of Figures
+
+\cleardoublepage
+\addcontentsline{toc}{section}{\listfigurename}
+\setlistoffigures
+\listoffigures
+
+% --------------------------------------------------
+% Appendix
 
 \appendix
 
 \input{sections/appendix-a}
 \input{sections/appendix-b}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Back Page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\makedisclaimer
+% End
+\label{PageEnd}
 
 \end{document}
 
